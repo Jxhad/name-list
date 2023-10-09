@@ -3,10 +3,10 @@ while True:
   userAction = input('enter add, show, edit, delete or exit: ')
   
   if 'add' in userAction:
-    todos = userAction[4:]
+    name = userAction[4:]
     with open('info.txt', 'r') as file:
      mylist = file.readlines()
-    mylist.append(todos)
+    mylist.append(name)
     with open('info.txt', 'a') as file:
      file.writelines(mylist)
      break
