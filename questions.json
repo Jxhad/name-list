@@ -1,0 +1,12 @@
+[
+  {
+    "questionsText": "how much money do you have?",
+    "choices": ["1k", "50k", "129", "im broke"],
+    "answer": 4
+  },
+  {
+    "questionsText": "are you gay?",
+    "choices": ["no tf", "yes(in ted voice)", "kinda", "im already gay(sayyad)"],
+    "answer": 2
+  }
+]
