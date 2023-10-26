@@ -1,26 +1,7 @@
 
-def getNames():
- with open('info.txt', 'r') as file_local:
-     mylist_local = file_local.readlines()
- return mylist_local
-
-
-def storeNames():
- with open('info.txt', 'w') as file_local:
-     file_local.writelines(mylist) 
-     return mylist
-
-
-
-def forLoop():
-  for index, item in enumerate(mylist):
-        item = item.strip('\n')
-        index+=1
-        row = f"{index}-{item}"
-        print(row)
-  return 
+from functions import getNames, storeNames, forLoop
         
-     
+
 while True:  
   userAction = input('enter add, show, edit, delete or exit: ')
   
@@ -28,22 +9,22 @@ while True:
     todos = userAction[4:]
     mylist = getNames()
     mylist.append(todos + '\n')
-    storeNames()
+    storeNames(mylist)
      
   elif 'show' in userAction:
      mylist = getNames()
-     forLoop()
+     forLoop(mylist) 
       
   elif 'edit' in userAction:
     try:
       mylist = getNames()
-      forLoop()
+      forLoop(mylist)
       number = int(input('please enter the number in the list: ')) 
       number-=1
       print(mylist[number])
       editname = input('please enter the username change:')
       mylist[number] = editname + '\n'
-      storeNames()
+      storeNames(mylist)
       print(mylist)
     except IndexError:
       print('the number doesnt exist') 
@@ -54,7 +35,7 @@ while True:
      number = int(number)
      number-=1
      mylist.pop(number)
-     storeNames()
+     storeNames(mylist)
     except IndexError:
       print('the number you entered doesnt exist')
        
