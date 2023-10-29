@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 yazeed
 ahmed
 jehad
@@ -7,6 +6,4 @@ fatman
 me7rez
 sayyad
 jj
-=======
-
->>>>>>> a4bb3ad703a92aec6d1a290082ce87f39f671489
+hamza
